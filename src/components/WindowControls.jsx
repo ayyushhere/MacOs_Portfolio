@@ -12,4 +12,3 @@ const WindowControls = ({ target }) => {
   )
 }
 
-export default WindowControls
