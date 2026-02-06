@@ -18,6 +18,7 @@ const Finder = () => {
         if (['fig', 'url'].includes(item.fileType) && item.href) return window.open(item.href, '_blank');
 
         if (item.fileType === 'txt') return openWindow("txtfile", item);
+        if (item.fileType === 'img') return openWindow("imgfile", item);
         openWindow(`${item.fileType}${item.id}`, item)
     }
 
