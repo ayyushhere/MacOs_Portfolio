@@ -7,26 +7,26 @@ import useWindowStore from '#store/Windows';
 
 const Dock = () => {
   const dockRef = useRef(null);
-  const {openWindow, closeWindow, windows} = useWindowStore();
+  const { openWindow, closeWindow, windows } = useWindowStore();
 
   useGSAP(() => {
     const dock = dockRef.current;
-    if(!dock) return;
+    if (!dock) return;
 
     const icons = dock.querySelectorAll(".dock-icon");
     const animateIcons = (mouseX) => {
-      const {left} = dock.getBoundingClientRect();
+      const { left } = dock.getBoundingClientRect();
 
       icons.forEach((icon) => {
-        const {left: iconLeft, width} = icon.getBoundingClientRect();
-        const center = iconLeft - left + width /2;
+        const { left: iconLeft, width } = icon.getBoundingClientRect();
+        const center = iconLeft - left + width / 2;
         const distance = Math.abs(mouseX - center);
 
         const intensity = Math.exp(-(distance ** 2.5) / 20000);
 
         gsap.to(icon, {
-          scale: 1+ 0.25 * intensity,
-          y: -15*intensity,
+          scale: 1 + 0.25 * intensity,
+          y: -15 * intensity,
           duration: 0.2,
           ease: "power1.out"
         })
@@ -34,7 +34,7 @@ const Dock = () => {
     };
 
     const handleMouseMove = (e) => {
-      const {left} = dock.getBoundingClientRect();
+      const { left } = dock.getBoundingClientRect();
 
       animateIcons(e.clientX - left);
     }
@@ -43,13 +43,13 @@ const Dock = () => {
       icons.forEach((icon) => {
         gsap.to(icon, {
           scale: 1,
-          y:0,
+          y: 0,
           duration: 0.3,
           ease: "power2.out",
         });
       });
     };
-    
+
     dock.addEventListener('mousemove', handleMouseMove);
     dock.addEventListener('mouseleave', resetIcons);
 
@@ -61,18 +61,18 @@ const Dock = () => {
   }, []);
 
   const toggleApp = (app) => {
-    if(!app.canOpen) return;
+    if (!app.canOpen) return;
 
     const window = windows[app.id];
-    
-    if(!window){
+
+    if (!window) {
       console.log(`Window with id ${app.id} not found.`);
       return;
     }
 
-    if(window.isOpen){
+    if (window.isOpen) {
       closeWindow(app.id);
-    } else{
+    } else {
       openWindow(app.id);
     }
   };
@@ -88,7 +88,7 @@ const Dock = () => {
           </div>
         ))}
 
-        <Tooltip id='dock-tooltip' place='top' className='tooltip'/>
+        <Tooltip id='dock-tooltip' place='top' className='tooltip' />
       </div>
 
     </section>
