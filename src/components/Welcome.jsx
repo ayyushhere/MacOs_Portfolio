@@ -26,12 +26,10 @@ const setupTextHover = (container, type) => {
     const letters = container.querySelectorAll("span");
     const { min, max, default: base } = FONT_WEIGHTS[type];
 
-    const animateLetter = (letter, weight, duration = 0.25) => {
-        return gsap.to(letter, {
-            duration, ease: 'power2.out',
-            fontVariationSettings: `'wght' ${weight}`,
-        });
-    };
+    // Initialize all letters with base weight
+    letters.forEach(letter => {
+        letter.style.fontVariationSettings = `'wght' ${base}`;
+    });
 
     const handleMouseMove = (e) => {
         const { left } = container.getBoundingClientRect();
@@ -39,23 +37,37 @@ const setupTextHover = (container, type) => {
 
         letters.forEach((letter) => {
             const { left: l, width: w } = letter.getBoundingClientRect();
-            const distance = Math.abs(mouseX - (l - left + w / 2));
-            const intensity = Math.exp(-(distance ** 2) / 20000);
+            const center = l - left + w / 2;
+            const distance = Math.abs(mouseX - center);
 
-            animateLetter(letter, base + (max - min) * intensity);
+            // Calculate intensity based on distance (Gaussian-like distribution)
+            const intensity = Math.exp(-(distance ** 2) / 10000); // Adjusted sigma for better feel
+            const targetWeight = base + (max - min) * intensity;
+
+            gsap.to(letter, {
+                fontVariationSettings: `'wght' ${targetWeight}`,
+                duration: 0.2,
+                ease: "power1.out",
+                overwrite: "auto"
+            });
         });
     };
 
     const handleMouseLeave = () => {
-        letters.forEach((letter) => {
-            animateLetter(letter, base, 0.3);
+        gsap.to(letters, {
+            fontVariationSettings: `'wght' ${base}`,
+            duration: 0.5,
+            ease: "elastic.out(1, 0.3)",
+            overwrite: "auto"
         });
     };
 
+    container.addEventListener("mouseleave", handleMouseLeave);
+    container.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-        container.addEventListener("mouseleave", handleMouseLeave);
-        container.addEventListener("mousemove", handleMouseMove);
+        container.removeEventListener("mouseleave", handleMouseLeave);
+        container.removeEventListener("mousemove", handleMouseMove);
     };
 };
 
