@@ -13,7 +13,7 @@ const renderText = (text, className, baseWeight = 400) => {
         <span
             key={i}
             className={className}
-            style={{ fontFeatureSettings: `'wght' ${baseWeight}` }}
+            style={{ fontVariationSettings: `'wght' ${baseWeight}` }}
         >
             {char === " " ? "\u00A0" : char}
         </span>
