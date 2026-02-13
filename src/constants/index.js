@@ -132,28 +132,28 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/ayyushhere",
   },
   {
     id: 2,
     text: "Platform",
     icon: "/icons/atom.svg",
     bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    link: "https://ayushhere.netlify.app/",
   },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    link: "https://x.com/Ayyushhere",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+    link: "https://www.linkedin.com/in/ayyushhere/",
   },
 ];
 
@@ -295,7 +295,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "",
           position: "top-20 left-20",
         },
         {
@@ -339,7 +339,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+          href: "",
           position: "top-10 right-20",
         },
         {
