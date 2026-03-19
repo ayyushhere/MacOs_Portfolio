@@ -102,27 +102,50 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: [
+      { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+    ],
   },
   {
     category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: [
+      { name: "React Native", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "Expo", icon: "https://cdn.simpleicons.org/expo/white" },
+    ],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: [
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+      { name: "Sass", icon: "https://cdn.simpleicons.org/sass/CC6699" },
+      { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+    ],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: [
+      { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+      { name: "Express", icon: "https://cdn.simpleicons.org/express/white" },
+      { name: "NestJS", icon: "https://cdn.simpleicons.org/nestjs/E0234E" },
+      { name: "Hono", icon: "https://cdn.simpleicons.org/hono/E36002" },
+    ],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: [
+      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+      { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+    ],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: [
+      { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+      { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
+      { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+    ],
   },
 ];
 
