@@ -251,7 +251,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "pest-alert-system.vercel.app",
+          href: "https://pest-alert-system.vercel.app",
           position: "top-10 right-20",
         },
         {
@@ -269,7 +269,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "Clothify",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -277,30 +277,28 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "Clothify Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "Full-Stack Clothing E-Commerce Website built with React, Node.js, Express, and MongoDB.",
+            "Includes a stunning frontend store, completely protected admin panel, and live order tracking.",
           ],
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "clothify-gold.vercel.app",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "",
+          href: "https://clothify-gold.vercel.app/",
           position: "top-20 left-20",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "clothify.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -339,7 +337,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "",
+          href: "#",
           position: "top-10 right-20",
         },
         {

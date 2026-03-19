@@ -118,10 +118,9 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#2e2e2e] border-b border-black/20 select-none text-sm text-gray-400 font-medium shadow-sm;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#2e2e2e]/60 backdrop-blur-xl border-b border-black/20 select-none text-sm text-gray-400 font-medium shadow-sm;
   }
 
-  /* Universal Window Styles for Dark Theme */
   #safari,
   #terminal,
   #contact,
@@ -130,7 +129,7 @@ body {
   #finder,
   #txtfile,
   #imgfile {
-    @apply bg-[#1e1e1e] border border-white/10 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-gray-200;
+    @apply bg-[#1e1e1e]/80 backdrop-blur-3xl border border-white/10 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-gray-200;
   }
 
   #safari {
@@ -145,7 +144,7 @@ body {
     }
 
     .blog {
-      @apply bg-[#1e1e1e] p-10 max-w-3xl mx-auto;
+      @apply bg-transparent p-10 max-w-3xl mx-auto;
 
       h2 {
         @apply text-xl font-bold text-pink-500 mb-10;
@@ -185,7 +184,7 @@ body {
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5 bg-[#1e1e1e] text-gray-300;
+      @apply text-sm font-roboto p-5 bg-transparent text-gray-300;
 
       .label {
         @apply flex items-center ms-10 mt-7;
@@ -282,7 +281,7 @@ body {
     }
 
     .gallery {
-      @apply p-5 bg-[#1e1e1e];
+      @apply p-5 bg-transparent;
 
       /* ... grid styles ... */
     }
@@ -326,7 +325,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-[#1e1e1e] max-w-2xl relative text-gray-200;
+      @apply flex-1 p-8 bg-transparent max-w-2xl relative text-gray-200;
 
       li {
         @apply absolute flex items-center flex-col gap-3;
