@@ -195,7 +195,7 @@ body {
       }
 
       .footnote {
-        @apply text-green-500 space-y-1;
+        @apply space-y-1;
 
         p {
           @apply flex items-center;

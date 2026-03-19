@@ -42,12 +42,12 @@ const Terminal = ({ windowKey }) => {
                 </ul>
 
                 <div className="footnote">
-                    <p>
+                    <p className="text-green-500">
                         <Check size={20} /> 5 of 5 stacks loaded successfully(100%)
                     </p>
 
-                    <p className='text-black'>
-                        <Flag size={15} fill='black' />
+                    <p className='text-white'>
+                        <Flag size={15} fill='white' strokeWidth={1.5} />
                         Render time:6ms
                     </p>
                 </div>
