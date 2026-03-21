@@ -72,12 +72,6 @@ const dockApps = [
     icon: "trash.png",
     canOpen: false,
   },
-  {
-    id: "showcase",
-    name: "Showcase",
-    icon: "appstore.png",
-    canOpen: true,
-  },
 ];
 
 const blogPosts = [
@@ -235,13 +229,6 @@ const gallery = [
   },
 ];
 
-const certifications = [
-  { id: 1, title: "Cloud Computing", issuer: "NPTEL", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png" },
-  { id: 2, title: "AI Essentials", issuer: "Google", icon: "https://cdn.simpleicons.org/google/4285F4" },
-  { id: 3, title: "Building Web app in PHP", issuer: "Coursera", icon: "https://cdn.simpleicons.org/coursera/0056D2" },
-  { id: 4, title: "Responsive Web Design", issuer: "FreeCodeCamp", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23" },
-];
-
 export {
   navLinks,
   navIcons,
@@ -251,7 +238,6 @@ export {
   socials,
   photosLinks,
   gallery,
-  certifications,
 };
 
 const WORK_LOCATION = {
@@ -265,7 +251,7 @@ const WORK_LOCATION = {
     {
       id: 5,
       name: "Agrifield",
-      icon: "/images/folder.png",
+      icon: "/images/project-1.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
       windowPosition: "top-[5vh] left-5", // optional: Finder window position
@@ -310,7 +296,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: "Clothify",
-      icon: "/images/folder.png",
+      icon: "/images/clothify.png",
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
@@ -352,7 +338,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: "Mac-OS Portfolio",
-      icon: "/images/folder.png",
+      icon: "/images/Ayush.jpeg",
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
@@ -465,12 +451,12 @@ const ABOUT_LOCATION = {
     },
     {
       id: 6,
-      name: "Education & Certs.txt",
+      name: "Education & Achievements.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
       position: "top-52 left-60",
-      subtitle: "Education, Certifications & Achievements",
+      subtitle: "Education & Achievements",
       description: [
         "🎓 EDUCATION",
         "• Lovely Professional University | Phagwara, Punjab",
@@ -478,12 +464,6 @@ const ABOUT_LOCATION = {
         "• Maharishi Vidya Mandir | Fatehpur, Uttar-Pradesh",
         "  Intermediate (76%) | Apr 2021 - Mar 2022",
         "  Matriculation (85%) | Apr 2019 - Mar 2020",
-        "",
-        "📜 CERTIFICATES",
-        "• Cloud Computing (NPTEL)",
-        "• Google – AI Essentials (Google)",
-        "• Building Web application in PHP (Coursera)",
-        "• Responsive Web Design (FreeCodeCamp)",
         "",
         "🏆 ACHIEVEMENTS",
         "• Solved 200+ coding problems across platforms like LeetCode and GeeksForGeeks.",
@@ -540,11 +520,26 @@ const TRASH_LOCATION = {
   ],
 };
 
+const CERTIFICATES_LOCATION = {
+  id: 6,
+  type: "certificates",
+  name: "Certificates",
+  icon: "/images/folder.png",
+  kind: "folder",
+  children: [
+    { id: 1, name: "Cloud Computing - NPTEL.txt", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png", kind: "file", fileType: "txt", position: "top-10 left-5", subtitle: "NPTEL", description: ["Cloud Computing certification achieved through NPTEL."] },
+    { id: 2, name: "AI Essentials - Google.txt", icon: "https://cdn.simpleicons.org/google/4285F4", kind: "file", fileType: "txt", position: "top-10 left-40", subtitle: "Google", description: ["AI Essentials certification achieved through Google."] },
+    { id: 3, name: "PHP Web App - Coursera.txt", icon: "https://cdn.simpleicons.org/coursera/0056D2", kind: "file", fileType: "txt", position: "top-10 right-20", subtitle: "Coursera", description: ["Building Web application in PHP certification achieved through Coursera."] },
+    { id: 4, name: "Responsive Web - FCC.txt", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23", kind: "file", fileType: "txt", position: "top-40 left-5", subtitle: "FreeCodeCamp", description: ["Responsive Web Design certification achieved through FreeCodeCamp."] },
+  ]
+};
+
 export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
   trash: TRASH_LOCATION,
+  certificates: CERTIFICATES_LOCATION,
 };
 
 const INITIAL_Z_INDEX = 1000;
@@ -558,7 +553,6 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  showcase: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

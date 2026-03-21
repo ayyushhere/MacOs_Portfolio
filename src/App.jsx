@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Navbar, Welcome, Dock } from '#components'
-import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos, Showcase } from '#windows';
+import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos } from '#windows';
 import useThemeStore from './store/Theme';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
@@ -41,7 +41,6 @@ const App = () => {
         <Photos />
         <Contact />
         <Home />
-        <Showcase />
       </section>
       <Dock />
     </main>
