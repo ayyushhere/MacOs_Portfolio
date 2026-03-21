@@ -72,6 +72,12 @@ const dockApps = [
     icon: "trash.png",
     canOpen: false,
   },
+  {
+    id: "showcase",
+    name: "Showcase",
+    icon: "appstore.png",
+    canOpen: true,
+  },
 ];
 
 const blogPosts = [
@@ -229,6 +235,13 @@ const gallery = [
   },
 ];
 
+const certifications = [
+  { id: 1, title: "Cloud Computing", issuer: "NPTEL", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png" },
+  { id: 2, title: "AI Essentials", issuer: "Google", icon: "https://cdn.simpleicons.org/google/4285F4" },
+  { id: 3, title: "Building Web app in PHP", issuer: "Coursera", icon: "https://cdn.simpleicons.org/coursera/0056D2" },
+  { id: 4, title: "Responsive Web Design", issuer: "FreeCodeCamp", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23" },
+];
+
 export {
   navLinks,
   navIcons,
@@ -238,6 +251,7 @@ export {
   socials,
   photosLinks,
   gallery,
+  certifications,
 };
 
 const WORK_LOCATION = {
@@ -544,6 +558,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  showcase: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

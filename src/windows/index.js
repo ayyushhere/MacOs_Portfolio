@@ -7,5 +7,6 @@ import Image from "./Image";
 import Contact from "./Contact";
 import Home from "./Home";
 import Photos from "./Photos";
+import Showcase from "./Showcase";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, Home, Photos }  
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, Home, Photos, Showcase }  
