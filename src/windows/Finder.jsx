@@ -57,7 +57,9 @@ const Finder = () => {
                 <ul className='content'>
                     {activeLocation?.children?.map((item) => (
                         <li key={item.id} className={clsx(item.position, "absolute flex flex-col items-center gap-2 p-3 w-32 rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group")} onClick={() => openItem(item)}>
-                            <img src={item.icon} alt={item.name} className="w-14 h-14 object-contain drop-shadow-lg group-hover:scale-110 group-active:scale-95 transition-transform duration-300" />
+                            <div className="w-16 h-16 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl flex items-center justify-center group-hover:scale-110 group-active:scale-95 transition-all duration-300">
+                                <img src={item.icon} alt={item.name} className="w-10 h-10 object-contain drop-shadow-md" />
+                            </div>
                             <p className="text-xs text-center font-medium w-full text-ellipsis overflow-hidden whitespace-nowrap px-3 py-1 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-md text-gray-300 group-hover:bg-blue-600/60 group-hover:text-white group-hover:border-blue-500/50 transition-colors duration-300">{item.name}</p>
                         </li>
                     ))}
