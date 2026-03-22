@@ -15,16 +15,16 @@ const BootLoader = ({ onComplete }) => {
         // 1. Progress bar filling up smoothly
         tl.to(progressRef.current, {
             width: "100%",
-            duration: 2.5,
+            duration: 1.0,
             ease: "power1.inOut"
         });
 
         // 2. Container fades out abruptly yet smoothly like MacOS
         tl.to(containerRef.current, {
             opacity: 0,
-            duration: 0.6,
+            duration: 0.4,
             ease: "power2.inOut",
-            delay: 0.2
+            delay: 0.1
         });
 
     }, [onComplete]);
