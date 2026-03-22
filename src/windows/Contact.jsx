@@ -15,6 +15,10 @@ const Contact = ({ windowKey }) => {
         // WARNING: Replace with actual Web3Forms Access Key
         const formData = new FormData(event.target);
         formData.append("access_key", "bd532c95-679a-4b56-ad08-e03c409ac85a");
+        
+        // Custom Email Formatting
+        formData.append("subject", "New Message from Portfolio OS ✨");
+        formData.append("from_name", "Portfolio Notifications");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -81,17 +85,17 @@ const Contact = ({ windowKey }) => {
 
                         <div className="space-y-1">
                             <label className="text-xs font-medium text-gray-400 ms-1">Name</label>
-                            <input type="text" name="name" required placeholder="John Doe" className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" />
+                            <input type="text" name="name" required placeholder="e.g. Elon Musk" className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" />
                         </div>
 
                         <div className="space-y-1">
                             <label className="text-xs font-medium text-gray-400 ms-1">Email</label>
-                            <input type="email" name="email" required placeholder="john@example.com" className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" />
+                            <input type="email" name="email" required placeholder="elon@spacex.com" className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all" />
                         </div>
 
                         <div className="space-y-1">
                             <label className="text-xs font-medium text-gray-400 ms-1">Message</label>
-                            <textarea name="message" required rows="4" placeholder="Hello Ayush..." className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all resize-none"></textarea>
+                            <textarea name="message" required rows="4" placeholder="Type your message here..." className="w-full bg-[#111111]/80 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all resize-none"></textarea>
                         </div>
 
                         <div className="flex items-center justify-between pt-2">
