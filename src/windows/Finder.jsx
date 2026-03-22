@@ -52,7 +52,7 @@ const Finder = () => {
             <div className='flex h-full'>
                 <div className='sidebar'>
                     {renderList("Favorites", Object.values(locations))}
-                    {renderList("Work", locations.work.children)}
+                    {renderList("Projects", locations.work.children)}
                 </div>
                 <ul className='content'>
                     {activeLocation?.children?.map((item) => (
@@ -60,7 +60,7 @@ const Finder = () => {
                             <div className="w-16 h-16 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl flex items-center justify-center group-hover:scale-110 group-active:scale-95 transition-all duration-300">
                                 <img src={item.icon} alt={item.name} className="w-10 h-10 object-contain drop-shadow-md" />
                             </div>
-                            <p className="text-xs text-center font-medium w-full text-ellipsis overflow-hidden whitespace-nowrap px-3 py-1 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-md text-gray-300 group-hover:bg-blue-600/60 group-hover:text-white group-hover:border-blue-500/50 transition-colors duration-300">{item.name}</p>
+                            <p className="text-xs text-center font-medium w-full leading-tight break-words whitespace-normal px-3 py-1.5 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-xl border border-white/10 shadow-md text-gray-300 group-hover:bg-blue-600/60 group-hover:text-white group-hover:border-blue-500/50 transition-colors duration-300 max-h-12 overflow-hidden">{item.name}</p>
                         </li>
                     ))}
                 </ul>

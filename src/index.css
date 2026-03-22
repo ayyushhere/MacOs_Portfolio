@@ -177,7 +177,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12;
+    @apply w-2xl absolute top-32 left-1/12;
 
     h2 {
       @apply font-bold text-sm text-center w-full text-gray-400;
@@ -264,7 +264,7 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20;
+    @apply absolute w-4xl min-h-[500px] left-32 top-20;
 
     .sidebar {
       @apply w-48 bg-[#252525]/90 backdrop-blur-xl border-r border-black/20 flex flex-col p-5 space-y-3;
