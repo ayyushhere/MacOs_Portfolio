@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Navbar, Welcome, Dock } from '#components'
+import React, { useEffect, useState } from 'react'
+import { Navbar, Welcome, Dock, BootLoader } from '#components'
 import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos } from '#windows';
 import useThemeStore from './store/Theme';
 import gsap from 'gsap';
@@ -10,6 +10,7 @@ gsap.registerPlugin(Draggable);
 
 const App = () => {
   const { wallpaper } = useThemeStore();
+  const [isBooting, setIsBooting] = useState(true);
 
   useEffect(() => {
     // Enforce dark mode
@@ -28,7 +29,8 @@ const App = () => {
   }, []);
 
   return (
-    <main className="w-full h-screen overflow-hidden text-white selection:bg-pink-500/30">
+    <main className="w-full h-screen overflow-hidden text-white selection:bg-pink-500/30 relative">
+      {isBooting && <BootLoader onComplete={() => setIsBooting(false)} />}
       <Navbar />
       <section className='relative h-[calc(100vh-80px)] w-full'>
         <Welcome />
