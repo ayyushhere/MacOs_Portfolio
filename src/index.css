@@ -209,7 +209,7 @@ body {
   }
 
   #contact {
-    @apply w-[480px] absolute top-20 left-1/3;
+    @apply w-[850px] absolute top-20 left-[15%];
 
     h2 {
       @apply font-bold text-sm text-center flex-1 text-gray-400;

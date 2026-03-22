@@ -31,13 +31,13 @@ const BootLoader = ({ onComplete }) => {
 
     return (
         <div ref={containerRef} className="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center select-none overflow-hidden">
-            
+
             <div className="flex flex-col items-center justify-center space-y-4 mb-20 translate-y-10">
-                
+
                 {/* Authentic Apple/Portfolio OS Logo mapped from system SVG */}
                 <img src="/macbook.png" alt="System Logo" className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] mb-2" />
 
-                <h1 className="text-xl md:text-2xl font-semibold tracking-wider text-[#f5f5f7]">AYUSH OS</h1>
+                <h1 className="text-xl md:text-2xl font-semibold tracking-wider text-[#f5f5f7]">AYUSH PORTFOLIO</h1>
 
                 <div className="w-64 h-1 mt-10 bg-[#333] rounded-full overflow-hidden">
                     <div ref={progressRef} className="h-full w-0 bg-white rounded-full" />
