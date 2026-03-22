@@ -64,8 +64,16 @@ const Messages = ({ windowKey }) => {
             
             setMessages(prev => [...prev, { text: result.response.text(), isBot: true }]);
         } catch (error) {
-            console.error(error);
-            setMessages(prev => [...prev, { text: "Sorry, I encountered an error. Please try again later.", isBot: true }]);
+            console.error("Gemini API Error:", error);
+            
+            let errorText = "Sorry, I encountered an error. Please try again later.";
+            if (error.message && error.message.includes("API key not valid")) {
+                errorText = "API Key Error: Your VITE_GEMINI_API_KEY is invalid. Please double-check it!";
+            } else if (error.message) {
+                errorText = `Error: ${error.message}`;
+            }
+
+            setMessages(prev => [...prev, { text: errorText, isBot: true }]);
         } finally {
             setLoading(false);
         }
