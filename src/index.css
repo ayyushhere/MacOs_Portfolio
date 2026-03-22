@@ -328,7 +328,7 @@ body {
   }
 
   #messages {
-    @apply w-4xl h-[600px] absolute top-24 left-32;
+    @apply w-[800px] h-[600px] max-w-[90vw] max-h-[85vh] absolute top-16 left-1/4 flex flex-col;
   }
 
   #home {
