@@ -251,7 +251,7 @@ const WORK_LOCATION = {
     {
       id: 5,
       name: "Agrifield",
-      icon: "/images/project-1.png",
+      icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
       windowPosition: "top-[5vh] left-5", // optional: Finder window position
@@ -296,7 +296,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: "Clothify",
-      icon: "/images/clothify.png",
+      icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
@@ -338,7 +338,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: "Mac-OS Portfolio",
-      icon: "/images/Ayush.jpeg",
+      icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
@@ -451,20 +451,13 @@ const ABOUT_LOCATION = {
     },
     {
       id: 6,
-      name: "Education & Achievements.txt",
+      name: "Achievements.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
       position: "top-52 left-60",
-      subtitle: "Education & Achievements",
+      subtitle: "Achievements & CP",
       description: [
-        "🎓 EDUCATION",
-        "• Lovely Professional University | Phagwara, Punjab",
-        "  Bachelor of Technology - Computer Science and Engineering | Aug 2023 - Present (CGPA: 7.65)",
-        "• Maharishi Vidya Mandir | Fatehpur, Uttar-Pradesh",
-        "  Intermediate (76%) | Apr 2021 - Mar 2022",
-        "  Matriculation (85%) | Apr 2019 - Mar 2020",
-        "",
         "🏆 ACHIEVEMENTS",
         "• Solved 200+ coding problems across platforms like LeetCode and GeeksForGeeks.",
         "• Achieved a maximum rating of 1000 demonstrating advanced algorithmic problem-solving."
@@ -534,12 +527,53 @@ const CERTIFICATES_LOCATION = {
   ]
 };
 
+const EDUCATION_LOCATION = {
+  id: 7,
+  type: "education",
+  name: "Education",
+  icon: "/images/folder.png",
+  kind: "folder",
+  children: [
+    {
+      id: 1,
+      name: "B.Tech CSE - LPU.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-10 left-10",
+      subtitle: "Lovely Professional University",
+      description: [
+        "🎓 Bachelor of Technology - Computer Science and Engineering",
+        "📍 Phagwara, Punjab",
+        "📅 Aug 2023 - Present",
+        "📈 CGPA: 7.65"
+      ]
+    },
+    {
+      id: 2,
+      name: "High School - MVM.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-10 left-40",
+      subtitle: "Maharishi Vidya Mandir",
+      description: [
+        "🎓 Intermediate & Matriculation",
+        "📍 Fatehpur, Uttar-Pradesh",
+        "📅 Apr 2019 - Mar 2022",
+        "📈 Intermediate: 76% | Matriculation: 85%"
+      ]
+    }
+  ]
+};
+
 export const locations = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
-  trash: TRASH_LOCATION,
+  education: EDUCATION_LOCATION,
   certificates: CERTIFICATES_LOCATION,
+  trash: TRASH_LOCATION,
 };
 
 const INITIAL_Z_INDEX = 1000;
