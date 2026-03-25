@@ -208,6 +208,14 @@ body {
     }
   }
 
+  #music {
+    @apply w-[360px] h-[400px] absolute top-24 right-20;
+    
+    h2 {
+      @apply font-bold text-sm text-center flex-1 text-gray-400 m-0;
+    }
+  }
+
   #contact {
     @apply w-[850px] absolute top-20 left-[15%];
 
