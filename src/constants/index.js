@@ -72,6 +72,12 @@ const dockApps = [
     icon: "trash.png",
     canOpen: false,
   },
+  {
+    id: "music",
+    name: "Spotify",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png",
+    canOpen: true,
+  },
 ];
 
 const blogPosts = [
@@ -520,10 +526,10 @@ const CERTIFICATES_LOCATION = {
   icon: "/images/folder.png",
   kind: "folder",
   children: [
-    { id: 1, name: "Cloud Computing - NPTEL.txt", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png", kind: "file", fileType: "txt", position: "top-10 left-5", subtitle: "NPTEL", description: ["Cloud Computing certification achieved through NPTEL."] },
-    { id: 2, name: "AI Essentials - Google.txt", icon: "https://cdn.simpleicons.org/google/4285F4", kind: "file", fileType: "txt", position: "top-10 left-40", subtitle: "Google", description: ["AI Essentials certification achieved through Google."] },
-    { id: 3, name: "PHP Web App - Coursera.txt", icon: "https://cdn.simpleicons.org/coursera/0056D2", kind: "file", fileType: "txt", position: "top-10 right-20", subtitle: "Coursera", description: ["Building Web application in PHP certification achieved through Coursera."] },
-    { id: 4, name: "Responsive Web - FCC.txt", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23", kind: "file", fileType: "txt", position: "top-40 left-5", subtitle: "FreeCodeCamp", description: ["Responsive Web Design certification achieved through FreeCodeCamp."] },
+    { id: 1, name: "Cloud Computing - NPTEL", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png", kind: "file", fileType: "url", href: "https://nptel-url-here.com", position: "top-10 left-5" },
+    { id: 2, name: "AI Essentials - Google", icon: "https://cdn.simpleicons.org/google/4285F4", kind: "file", fileType: "url", href: "https://google-ai-url-here.com", position: "top-10 left-36" },
+    { id: 3, name: "PHP Web App - Coursera", icon: "https://cdn.simpleicons.org/coursera/0056D2", kind: "file", fileType: "url", href: "https://coursera-url-here.com", position: "top-10 right-20" },
+    { id: 4, name: "Responsive Web - FCC", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23", kind: "file", fileType: "url", href: "https://fcc-url-here.com", position: "top-40 left-5" },
   ]
 };
 
@@ -585,6 +591,7 @@ const WINDOW_CONFIG = {
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  music: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };

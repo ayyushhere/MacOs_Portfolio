@@ -42,6 +42,7 @@ const App = () => {
         <ImageWindow />
         <Photos />
         <Contact />
+        <Music windowKey="music" />
         <Home />
       </section>
       <Dock />
