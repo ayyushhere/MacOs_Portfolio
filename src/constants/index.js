@@ -519,51 +519,40 @@ const TRASH_LOCATION = {
   ],
 };
 
+const certFiles = [
+  "AI Agent Hackathon.pdf", "AYUSH--certificate.pdf", "AYUSH-KUMAR_expert-session-participant_eHT90C.pdf",
+  "Adobe India Hackathon.pdf", "Ayush kumar CSE PATHSALA.pdf", "Building web application in php.pdf",
+  "ChatGpt Made easy_ Ai Essentials for beginners_Udemy.pdf", "CipherSchool- DSA using JAVA.pdf",
+  "Cloud Computing - NPTEL.pdf", "Codefiesta.pdf", "Computation Theory -Lamguage Principle and Finite Theory.pdf",
+  "Coursera Intro to FE Developnment.pdf", "DEVTOWN JS.pdf", "Digital system ogic gates to processor.pdf",
+  "Discover the Art of Prompting-Google.pdf", "GitHub CipherSchools.pdf", "Google Introduction to AI - Coursera.pdf",
+  "IBM Introduction to hardware and operating system.pdf", "Java Neocolab.pdf", "Maximize Productivity with AI Tools - Google.pdf",
+  "NeoColab.pdf", "Outskill_AI_MAstermind.pdf", "Python for begginers.pdf", "Python for beginners.png",
+  "Stay Ahead of the AI Curve-Google.pdf", "The bits and bytes.pdf", "Udemy Build Generative AI Apps and Solutions with No-Code Tools.pdf",
+  "Udemy_Master GenAi and GenAi tools.pdf", "Use AI Responsibly - Google.pdf", "Wha is Generative Ai - Linkedin Learning.pdf",
+  "What is Generative Ai.png", "freeCodeCamp.png"
+];
+
+const mappedCerts = certFiles.map((file, i) => {
+  const isImage = file.endsWith('.png');
+  return {
+    id: i + 1,
+    name: file.replace('.pdf', '').replace('.png', ''),
+    icon: isImage ? "/images/image.png" : "/images/pdf.png",
+    kind: "file",
+    fileType: isImage ? "img" : "url",
+    href: isImage ? undefined : `/certificates/${file}`,
+    imageUrl: isImage ? `/certificates/${file}` : undefined
+  };
+});
+
 const CERTIFICATES_LOCATION = {
   id: 6,
   type: "certificates",
   name: "Certificates",
   icon: "/images/folder.png",
   kind: "folder",
-  children: [
-    "https://drive.google.com/open?id=1HalBOQVaf4FEmgEy1oA4NUXZqmv02eO_&usp=drive_copy",
-    "https://drive.google.com/open?id=1_kDgVJ8uamMrXckMgzsY3iCXqiQ6b_tg&usp=drive_copy",
-    "https://drive.google.com/open?id=1q0yPZIBYjv8v4WOANkdI3y7Dg4S2ADdK&usp=drive_copy",
-    "https://drive.google.com/open?id=1X76ezmxCDnQ1P3bqTksbnZ11O4Q5_oMg&usp=drive_copy",
-    "https://drive.google.com/open?id=14XidKm77_2lVT_WK-D9oXxeasL7jSHxq&usp=drive_copy",
-    "https://drive.google.com/open?id=1ntyubdeMOTVesR4HtHKlYSah0DrThJzW&usp=drive_copy",
-    "https://drive.google.com/open?id=1LDzcjwoL3lQottnJXX4_QivGWdd1y_2H&usp=drive_copy",
-    "https://drive.google.com/open?id=1qNc_NEHAkmoCyxj9WYBbaMGx0ucCMtK0&usp=drive_copy",
-    "https://drive.google.com/open?id=15lbCMeYX6tT6tA302vSA27c3nRg0juHI&usp=drive_copy",
-    "https://drive.google.com/open?id=11cdqbnz4Bnv08ort4xOcKn9OKrvfdusf&usp=drive_copy",
-    "https://drive.google.com/open?id=1LqLWihkJ0KveKTb-7llaqBIA_yYZTX_d&usp=drive_copy",
-    "https://drive.google.com/open?id=1ZTi8_9tbEhCctcwx_7hEnmdwp7g5RR4g&usp=drive_copy",
-    "https://drive.google.com/open?id=1pe8fSBCFL0-Od7B2kxhzfMEcIQulSEb5&usp=drive_copy",
-    "https://drive.google.com/open?id=1tHNFoFT8d4xmooEYHv8wQQPt7rHB6X7g&usp=drive_copy",
-    "https://drive.google.com/open?id=1-Za6nWrZL2wKbJerUah8DW_l404Z0fBS&usp=drive_copy",
-    "https://drive.google.com/open?id=10Crpy961irUA08TUepM5pIDLuwAOJ09T&usp=drive_copy",
-    "https://drive.google.com/open?id=1o7XbSlXU7N52VK-sBGkhg5thK74dQ1wG&usp=drive_copy",
-    "https://drive.google.com/open?id=1CR-EwnM1k1um4EX-gHkIMccoS_WfmhVh&usp=drive_copy",
-    "https://drive.google.com/open?id=1W6WHRoyuREiiw5HSLMx4MRLn1qxzCLm4&usp=drive_copy",
-    "https://drive.google.com/open?id=15qOFH9W3Araqgg5jmIKOk0YQVa5PmP6L&usp=drive_copy",
-    "https://drive.google.com/open?id=1T4Nvxyt6qiL0sCeJwqoqywDnpCMNPYpd&usp=drive_copy",
-    "https://drive.google.com/open?id=1K7qVJh4zl3ixEpNjIYMMVv75qkxy_SYj&usp=drive_copy",
-    "https://drive.google.com/open?id=1dof7sZg5qSiSNOnDnXjKn5B_fV0mHHpY&usp=drive_copy",
-    "https://drive.google.com/open?id=1zlEicr9k98SvnroGp03UydkiJepTSeFl&usp=drive_copy",
-    "https://drive.google.com/open?id=1V8y2fNByBhp_CQDQXc72Qk_z2vSckPIB&usp=drive_copy",
-    "https://drive.google.com/open?id=1SwlEMexUs4RPsOJ5S9-bPoKJPF97Pc40&usp=drive_copy",
-    "https://drive.google.com/open?id=1slJLn5lFo6850nbLbm6IUQ8rTBi-t4qY&usp=drive_copy",
-    "https://drive.google.com/open?id=1VDyaZk_jU2a8yV-HzOUhPBPxFdab6eF8&usp=drive_copy",
-    "https://drive.google.com/open?id=1U5z6FBBrUQgOmVhf0Ipor2MiYmBZF2fH&usp=drive_copy",
-    "https://drive.google.com/open?id=17vK8Q68F_1aRrvvCe9IJQXs90jgQWRQT&usp=drive_copy"
-  ].map((link, i) => ({
-    id: i + 1,
-    name: `Certificate ${i + 1}`,
-    icon: "/images/pdf.png",
-    kind: "file",
-    fileType: "url",
-    href: link
-  }))
+  children: mappedCerts
 };
 
 const EDUCATION_LOCATION = {
