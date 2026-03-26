@@ -55,8 +55,6 @@ const Finder = () => {
             <div className='flex h-full'>
                 <div className='sidebar overflow-y-auto'>
                     {renderList("Favorites", Object.values(locations))}
-                    {renderList("Education", locations.education.children)}
-                    {renderList("Professional", locations.professional.children)}
                     {renderList("Projects", locations.work.children)}
                 </div>
                 <ul className='content flex-1 p-6 flex flex-wrap gap-6 items-start content-start overflow-y-auto bg-transparent relative z-10'>

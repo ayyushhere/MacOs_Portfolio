@@ -299,10 +299,10 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-transparent max-w-2xl relative text-gray-200;
+      @apply flex-1 p-8 bg-transparent relative text-gray-200;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply flex items-center flex-col gap-3 transition-all duration-300;
         
         img {
           @apply object-contain object-center size-16 relative transition-transform;
