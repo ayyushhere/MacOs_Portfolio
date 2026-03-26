@@ -33,7 +33,10 @@ const Finder = () => {
                     const inactiveClass = "bg-transparent hover:bg-white/5 hover:text-white text-[#e6e6e6]/60 border border-transparent";
 
                     return (
-                        <li key={item.id} onClick={() => setActiveLocation(item)} className={clsx(`rounded-xl px-3 py-2 cursor-pointer flex items-center gap-3 transition-all duration-300`, isActive ? activeClass : inactiveClass)}>
+                        <li key={item.id} onClick={() => {
+                            if (item.kind === 'file') openItem(item);
+                            else setActiveLocation(item);
+                        }} className={clsx(`rounded-xl px-3 py-2 cursor-pointer flex items-center gap-3 transition-all duration-300`, isActive ? activeClass : inactiveClass)}>
                             <img src={item.icon} className='w-4' alt={item.name} />
                             <p className='text-sm font-medium truncate'>{item.name}</p>
                         </li>
@@ -50,13 +53,15 @@ const Finder = () => {
             </div>
 
             <div className='flex h-full'>
-                <div className='sidebar'>
+                <div className='sidebar overflow-y-auto'>
                     {renderList("Favorites", Object.values(locations))}
+                    {renderList("Education", locations.education.children)}
+                    {renderList("Professional", locations.professional.children)}
                     {renderList("Projects", locations.work.children)}
                 </div>
-                <ul className='content'>
+                <ul className='content flex-1 p-6 flex flex-wrap gap-6 items-start content-start overflow-y-auto bg-transparent relative z-10'>
                     {activeLocation?.children?.map((item) => (
-                        <li key={item.id} className={clsx(item.position, "absolute flex flex-col items-center gap-2 p-3 w-32 rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group")} onClick={() => openItem(item)}>
+                        <li key={item.id} className="flex flex-col items-center gap-2 p-3 w-32 rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group" onClick={() => openItem(item)}>
                             <div className="w-16 h-16 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl flex items-center justify-center group-hover:scale-110 group-active:scale-95 transition-all duration-300">
                                 <img src={item.icon} alt={item.name} className="w-10 h-10 object-contain drop-shadow-md" />
                             </div>

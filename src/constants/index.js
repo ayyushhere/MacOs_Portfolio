@@ -391,59 +391,32 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: "/images/txt.png",
+  kind: "file",
+  fileType: "txt",
+  subtitle: "Meet the Developer Behind the Code",
+  image: "/images/Ayush.jpeg",
+  description: [
+    "Hey, I'm Ayush 👋 — a Frontend Developer dedicated to crafting premium, high-performance web experiences.",
+    "I specialize in React, Next.js, and modern CSS/GSAP animations, bridging the gap between exceptional design and robust engineering.",
+    "My philosophy is simple: build interfaces that feel fluid, responsive, and delightful to interact with. If it's not pixel-perfect, it's not finished.",
+    "When I'm not pushing pixels or optimizing build times, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅"
+  ],
+};
+
+const PROFESSIONAL_LOCATION = {
+  id: 8,
+  type: "professional",
+  name: "Professional",
+  icon: "/images/folder.png",
   kind: "folder",
   children: [
-    {
-      id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "/images/Ayush.jpeg",
-    },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "/images/casual-me.jpeg",
-    },
-    {
-      id: 3,
-      name: "group-photo.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "/images/group-photo.jpeg",
-    },
-    {
-      id: 4,
-      name: "about-me.txt",
-      icon: "/images/txt.png",
-      kind: "file",
-      fileType: "txt",
-      position: "top-60 left-5 border-2 border-black",
-      subtitle: "Meet the Developer Behind the Code",
-      image: "/images/Ayush.jpeg",
-      description: [
-        "Hey, I'm Ayush 👋 — a Frontend Developer dedicated to crafting premium, high-performance web experiences.",
-        "I specialize in React, Next.js, and modern CSS/GSAP animations, bridging the gap between exceptional design and robust engineering.",
-        "My philosophy is simple: build interfaces that feel fluid, responsive, and delightful to interact with. If it's not pixel-perfect, it's not finished.",
-        "When I'm not pushing pixels or optimizing build times, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅"
-      ],
-    },
     {
       id: 5,
       name: "Experience.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-52 left-32",
       subtitle: "Professional Experience",
       description: [
         "Outlier | AI Trainer | Remote (Sep 2024 – Apr 2025)",
@@ -461,7 +434,6 @@ const ABOUT_LOCATION = {
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-52 left-60",
       subtitle: "Achievements & CP",
       description: [
         "🏆 ACHIEVEMENTS",
@@ -527,7 +499,7 @@ const certFiles = [
   "Coursera Intro to FE Developnment.pdf", "DEVTOWN JS.pdf", "Digital system ogic gates to processor.pdf",
   "Discover the Art of Prompting-Google.pdf", "GitHub CipherSchools.pdf", "Google Introduction to AI - Coursera.pdf",
   "IBM Introduction to hardware and operating system.pdf", "Java Neocolab.pdf", "Maximize Productivity with AI Tools - Google.pdf",
-  "NeoColab.pdf", "Outskill_AI_MAstermind.pdf", "Python for begginers.pdf", "Python for beginners.png",
+  "NeoColab.pdf", "Python for begginers.pdf", "Python for beginners.png",
   "Stay Ahead of the AI Curve-Google.pdf", "The bits and bytes.pdf", "Udemy Build Generative AI Apps and Solutions with No-Code Tools.pdf",
   "Udemy_Master GenAi and GenAi tools.pdf", "Use AI Responsibly - Google.pdf", "Wha is Generative Ai - Linkedin Learning.pdf",
   "What is Generative Ai.png", "freeCodeCamp.png"
@@ -600,6 +572,7 @@ export const locations = {
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,
   education: EDUCATION_LOCATION,
+  professional: PROFESSIONAL_LOCATION,
   certificates: CERTIFICATES_LOCATION,
   trash: TRASH_LOCATION,
 };
