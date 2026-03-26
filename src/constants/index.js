@@ -579,7 +579,6 @@ export const locations = {
   resume: RESUME_LOCATION,
   education: EDUCATION_LOCATION,
   professional: PROFESSIONAL_LOCATION,
-  certificates: CERTIFICATES_LOCATION,
   trash: TRASH_LOCATION,
 };
 
