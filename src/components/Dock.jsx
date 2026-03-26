@@ -65,9 +65,11 @@ const Dock = () => {
     if (!app.canOpen) return;
 
     if (app.id === 'certificates') {
-      const { setActiveLocation } = useLocationStore.getState();
-      setActiveLocation(locations.certificates);
-      if (!windows.finder.isOpen) openWindow("finder");
+      if (windows.certificates.isOpen) {
+        closeWindow('certificates');
+      } else {
+        openWindow('certificates');
+      }
       return;
     }
 

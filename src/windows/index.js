@@ -8,5 +8,6 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Photos from "./Photos";
 import Music from "./Music";
+import Certificates from "./Certificates";
 
-export { Terminal, Safari, Resume, Finder, Text, Image, Contact, Home, Photos, Music }  
+export { Terminal, Safari, Resume, Finder, Text, Image, Contact, Home, Photos, Music, Certificates }
