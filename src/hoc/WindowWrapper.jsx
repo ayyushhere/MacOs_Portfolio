@@ -35,6 +35,8 @@ const WindowWrapper = (Component, windowKey) => {
 
     useGSAP(() => {
       if (isMobile) return;
+      const el = ref.current;
+      if (!el) return;
 
       const [instance] = Draggable.create(el, {
         onPress: () => focusWindow(windowKey),

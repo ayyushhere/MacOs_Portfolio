@@ -124,7 +124,7 @@ const techStack = [
     category: "Frontend",
     items: [
       { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
-      { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+      { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6" },
       { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
       { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB" },
       { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
@@ -147,7 +147,7 @@ const techStack = [
       { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
       { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
       { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-      { name: "AWS", icon: "https://cdn.simpleicons.org/amazonwebservices/232F3E" },
+      { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" },
       { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
       { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
     ],
@@ -156,7 +156,7 @@ const techStack = [
     category: "Core CS",
     items: [
       { name: "DSA", icon: "https://cdn.simpleicons.org/leetcode/FFA116" },
-      { name: "OOPs", icon: "https://cdn.simpleicons.org/java/007396" },
+      { name: "OOPs", icon: "https://cdn.simpleicons.org/openjdk/007396" },
       { name: "OS & Networks", icon: "https://cdn.simpleicons.org/linux/FCC624" },
       { name: "DBMS", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
     ],

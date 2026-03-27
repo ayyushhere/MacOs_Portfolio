@@ -59,7 +59,7 @@ const Certificates = () => {
             accent: 'text-blue-500'
         };
         if (n.includes('neocolab') || n.includes('lpu')) return { 
-            logo: 'https://v1.nitrocdn.com/kUphmXzXNfHqMvBwWqXvHqXv/assets/static/optimized/rev-8b3d9c7/wp-content/uploads/2021/08/LPU-Logo.png', 
+            logo: 'https://upload.wikimedia.org/wikipedia/en/3/3a/Lovely_Professional_University_logo.png', 
             theme: 'from-orange-500/5 to-transparent',
             accent: 'text-orange-500'
         };
