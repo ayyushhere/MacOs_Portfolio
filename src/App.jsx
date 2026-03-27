@@ -41,10 +41,10 @@ const App = () => {
   }, []);
 
   return (
-    <main className="w-full h-screen overflow-hidden text-white selection:bg-pink-500/30 relative">
+    <main className="w-full h-dvh overflow-hidden text-white selection:bg-pink-500/30 relative">
       {isBooting && <BootLoader onComplete={() => setIsBooting(false)} />}
       <Navbar />
-      <section className='relative h-[calc(100vh-80px)] w-full'>
+      <section className='relative h-[calc(100dvh-80px)] w-full'>
         <Welcome />
         <Terminal />
         <Safari />
