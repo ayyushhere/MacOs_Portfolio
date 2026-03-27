@@ -57,10 +57,11 @@ const WindowWrapper = (Component, windowKey) => {
       top: 0,
       left: 0,
       width: '100vw',
-      height: isMobile ? 'calc(100vh - 80px)' : '100%', // Adjust for navbar/dock on mobile if needed
-      transform: 'none !important',
-      zIndex
-    } : { zIndex };
+      height: isMobile ? 'calc(100dvh - 80px)' : '100%',
+      transform: 'none',
+      zIndex: isMobile ? 9999 + zIndex : zIndex,
+      touchAction: 'pan-y'
+    } : { zIndex, touchAction: 'auto' };
 
     // When maximized, we might want to disable dragging or enforce position
     // For simplicity, we just use styles to override. 
@@ -71,7 +72,7 @@ const WindowWrapper = (Component, windowKey) => {
       id={windowKey}
       ref={ref}
       style={maximizeStyle}
-      className={`absolute ${(isMaximized || isMobile) ? '!transform-none !w-full !h-full !top-0 !left-0' : ''}`}
+      className={`absolute ${(isMaximized || isMobile) ? '!transform-none !w-full !h-full !top-0 !left-0 pointer-events-auto' : ''}`}
     >
       <Component {...props} windowKey={windowKey} />
     </section>

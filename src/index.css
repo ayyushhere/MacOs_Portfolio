@@ -128,19 +128,25 @@ body {
   }
 
   #window-controls {
-    @apply flex gap-2;
+    @apply flex gap-2 max-sm:gap-4;
 
-    .close {
-      @apply size-3.5 rounded-full bg-[#ff5f57] border border-[#e0443e] cursor-pointer hover:brightness-90;
+    .close,
+    .minimize,
+    .maximize {
+      @apply size-3.5 rounded-full bg-[#ff5f57] border border-[#e0443e] cursor-pointer hover:brightness-90 max-sm:size-6;
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#febc2e] border border-[#dba023] cursor-pointer hover:brightness-90 max-sm:hidden;
+      @apply bg-[#febc2e] border border-[#dba023] max-sm:hidden;
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#28c840] border border-[#1aa42f] cursor-pointer hover:brightness-90 max-sm:hidden;
+      @apply bg-[#28c840] border border-[#1aa42f] max-sm:hidden;
     }
+  }
+
+  .custom-scrollbar {
+    -webkit-overflow-scrolling: touch;
   }
 
   .text-glow {
