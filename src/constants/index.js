@@ -406,10 +406,10 @@ const ABOUT_LOCATION = {
   subtitle: "Meet the Developer Behind the Code",
   image: "/images/Ayush.jpeg",
   description: [
-    "Hey, I'm Ayush 👋 — a Frontend Developer dedicated to crafting premium, high-performance web experiences.",
-    "I specialize in React, Next.js, and modern CSS/GSAP animations, bridging the gap between exceptional design and robust engineering.",
-    "My philosophy is simple: build interfaces that feel fluid, responsive, and delightful to interact with. If it's not pixel-perfect, it's not finished.",
-    "When I'm not pushing pixels or optimizing build times, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅"
+    "Hey, I’m Ayush.",
+    "I’m a passionate web developer who loves turning simple ideas into smooth, interactive digital experiences. I enjoy building products that are not just functional, but also intuitive and visually engaging for users.",
+    "What excites me most about development is the perfect blend of creativity and logic — designing interfaces that look great while ensuring everything works seamlessly behind the scenes.",
+    "I’m constantly exploring new technologies, building projects, and improving my skills — learning something new with every line of code I write."
   ],
 };
 
